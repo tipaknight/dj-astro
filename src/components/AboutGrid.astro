@@ -1,0 +1,39 @@
+<div class="about-icon">
+  <div class="about-icon__item">
+    <div id="square"></div>
+    <p class="p-fluid">Based in: Los Angeles</p>
+  </div>
+  <div class="about-icon__item">
+    <div id="square"></div>
+    <p class="p-fluid">Founded in 2011</p>
+  </div>
+  <div class="about-icon__item">
+    <div id="square"></div>
+    <p class="p-fluid">Genre: #DancePop</p>
+  </div>
+  <div class="about-icon__item">
+    <div id="square"></div>
+    <p class="p-fluid">Label: 333 Recordings</p>
+  </div>
+</div>
+<style lang="scss">
+  .about-icon {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px 20px;
+    margin-top: 40px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  #square {
+    width: 30px;
+    height: 30px;
+    background: var(--accept);
+    border-radius: 10px 0;
+  }
+</style>

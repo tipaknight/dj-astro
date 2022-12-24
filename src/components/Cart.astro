@@ -1,0 +1,40 @@
+---
+export interface Props {
+  imgCart: string;
+  textCart: string;
+  altCart: string;
+}
+import { Image } from "@astrojs/image/components";
+
+const { imgCart, textCart, altCart } = Astro.props;
+---
+
+<div class="cart-inner">
+  <Image class="cart-inner__img" src={imgCart} alt={altCart} format="avif" />
+  <div class="cart-inner__text">{textCart}</div>
+</div>
+<style lang="scss">
+  .cart-inner {
+    position: relative;
+    width: 90%;
+    max-width: 350px;
+    &__img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 20px 0;
+    }
+    &__text {
+      position: absolute;
+      bottom: 0;
+      background: var(--accept);
+      width: 100%;
+      opacity: 0.8;
+      border-radius: 20px 0;
+      color: var(--white);
+      font-size: 10px;
+      text-align: left;
+      padding: 20px;
+    }
+  }
+</style>

@@ -1,0 +1,205 @@
+// Переменные
+//  container
+$containerWidth: 1080;
+$containerPadding: 40;
+$containerSidePadding: 2;
+// breakpoints
+$breakpoint1200: 1199.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint480: 479.98 + px;
+
+// color
+:root {
+  --black: #000000;
+  --fon-black: #1E1E1E;
+  --shark: #292F36;
+  --white: #ffffff;
+  --accept: #7A66CC;
+  --danube: #478ac9;
+}
+
+// Шрифты
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-SemiBold.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Сброс
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+audio {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+audio {
+  width: 100%;
+}
+
+audio::-webkit-media-controls-enclosure {
+  max-width: none
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: transparent
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+// Глобальные
+.container {
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+
+  @media (max-width: $breakpoint992) {
+    max-width: 970px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    max-width: none;
+  }
+}
+
+
+body {
+  background-color: var(--fon-black);
+  font-family: 'Poppins', sans-serif;
+  color: var(--white);
+
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+.h1-fluid {
+  font-size: calc(1rem + 5vw);
+  font-weight: bold;
+  line-height: calc(1.4rem + 4.8vw);
+
+}
+
+.h2-fluid {
+  font-size: calc(1rem + 2vw);
+  font-weight: bold;
+  line-height: calc(1.4rem + 2.4vw);
+}
+
+.h3-fluid {
+  font-size: calc(1rem + 1vw);
+  line-height: calc(1.4rem + 1.2vw);
+}
+
+.p-fluid {
+  font-size: calc(0.7rem + 0.2vw);
+  line-height: calc(1.2rem + 0.5vw);
+}
+
+.section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

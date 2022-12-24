@@ -1,0 +1,131 @@
+---
+import { Image } from "@astrojs/image/components";
+import Gal1 from "../images/gal-1.jpg";
+import Gal2 from "../images/gal-2.jpg";
+import Gal3 from "../images/gal-3.jpg";
+import Gal4 from "../images/gal-4.jpg";
+import Gal5 from "../images/gal-5.jpg";
+---
+
+<section class="section section-gallery" id="media">
+  <div class="container">
+    <div class="gallery-grid">
+      <div id="gallery-item-0">
+        <Image class="gal-img" src={Gal1} alt="gal-1" format="avif" />
+      </div>
+      <div id="gallery-item-1">
+        <Image class="gal-img" src={Gal2} alt="gal-1" format="avif" />
+      </div>
+      <div id="gallery-item-2">
+        <Image class="gal-img" src={Gal3} alt="gal-1" format="avif" />
+      </div>
+      <div id="gallery-item-3">
+        <Image class="gal-img" src={Gal4} alt="gal-1" format="avif" />
+      </div>
+      <div id="gallery-item-4">
+        <Image class="gal-img" src={Gal5} alt="gal-1" format="avif" />
+        <h3 class="title-gal">EDC Las Vegas Mainstage</h3>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .section-gallery {
+    padding: 60px 0;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    gap: 30px;
+    height: 100%;
+    padding: 0 40px;
+  }
+
+  #gallery-item-0 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 2;
+  }
+  #gallery-item-1 {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 2;
+    grid-column-end: 3;
+  }
+  #gallery-item-2 {
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 2;
+    grid-column-end: 4;
+  }
+  #gallery-item-3 {
+    grid-row-start: 1;
+    grid-column-start: 4;
+    grid-row-end: 3;
+    grid-column-end: 5;
+  }
+  #gallery-item-4 {
+    position: relative;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 4;
+  }
+  .gal-img {
+    border-radius: 35px 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .title-gal {
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+    top: 50%;
+    left: 33%;
+    transform: translate(-15%, -50%);
+    color: var(--accept);
+  }
+  @media screen and (max-width: 768px) {
+    .gallery-grid {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      height: 100%;
+      padding: 0 20px;
+    }
+    #gallery-item-0 {
+      grid-row-start: 1;
+      grid-column-start: 1;
+      grid-row-end: 3;
+      grid-column-end: 2;
+    }
+    #gallery-item-1 {
+      grid-row-start: 1;
+      grid-column-start: 2;
+      grid-row-end: 2;
+      grid-column-end: 3;
+    }
+    #gallery-item-2 {
+      grid-row-start: 3;
+      grid-column-start: 1;
+      grid-row-end: 4;
+      grid-column-end: 2;
+    }
+    #gallery-item-3 {
+      grid-row-start: 2;
+      grid-column-start: 2;
+      grid-row-end: 4;
+      grid-column-end: 3;
+    }
+    #gallery-item-4 {
+      grid-row-start: 4;
+      grid-column-start: 1;
+      grid-row-end: 5;
+      grid-column-end: 3;
+    }
+  }
+</style>

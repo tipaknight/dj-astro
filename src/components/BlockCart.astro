@@ -1,0 +1,28 @@
+---
+import Cart from "../components/Cart.astro";
+import aboutImg1 from "../images/about-1.jpg";
+import aboutImg2 from "../images/about-2.jpg";
+import aboutImg3 from "../images/about-3.jpg";
+---
+
+<div class="block-cart">
+  <Cart
+    altCart="about img 1"
+    textCart="Working on my upcoming full-lenth."
+    imgCart={aboutImg1}
+  />
+  <Cart altCart="about img 2" textCart="Halloween vibes." imgCart={aboutImg2} />
+  <Cart
+    altCart="about img 3"
+    textCart="WarForLove is OUT NOW!!"
+    imgCart={aboutImg3}
+  />
+</div>
+<style lang="scss">
+  .block-cart {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+</style>

@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Say from "../components/Say.astro";
+import Music from "../components/Music.astro";
+import Gallery from "../components/Gallery.astro";
+import Carousel from "../components/Carousel.vue";
+---
+
+<Layout title="DJ">
+	<main>
+		<Hero />
+		<About />
+		<Say />
+		<Music />
+		<Gallery />
+		<Carousel client:load />
+	</main>
+</Layout>
+
+<style></style>

@@ -1,0 +1,39 @@
+---
+import icSp from "../images/spotify.svg";
+import icApple from "../images/apple.svg";
+---
+
+<div class="ic-music">
+  <p class="ic-music__text">Follow me:</p>
+  <div class="ic-music__item">
+    <img src={icSp} width="30" alt="spotify" />
+    <p class="ic-music__item--text">Spotify</p>
+  </div>
+  <div class="ic-music__item">
+    <img src={icApple} width="30" alt="apple" />
+    <p class="ic-music__item--text">iTunes</p>
+  </div>
+</div>
+<style lang="scss">
+  .ic-music {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 25px;
+    margin: 40px 0 20px;
+    &__text {
+      font-size: 24px;
+      font-weight: 500;
+    }
+    &__item {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 10px;
+      &--text {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,52 @@
+---
+export interface Props {
+  ImgPoster1: string;
+  ImgPoster2: string;
+  altPosterImg1: string;
+  altPosterImg2: string;
+}
+import { Image } from "@astrojs/image/components";
+const { ImgPoster1, ImgPoster2, altPosterImg1, altPosterImg2 } = Astro.props;
+---
+
+<div class="poster">
+  <Image
+    class="poster__img2"
+    alt={altPosterImg2}
+    src={ImgPoster2}
+    format="avif"
+  /><Image
+    class="poster__img1"
+    alt={altPosterImg1}
+    src={ImgPoster1}
+    format="avif"
+  />
+</div>
+<style lang="scss">
+  .poster {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    margin: auto;
+    &__img1 {
+      display: block;
+      position: absolute;
+      width: 85%;
+      height: auto;
+      max-width: 430px;
+      border-radius: 38px 0;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+    &__img2 {
+      position: relative;
+      opacity: 0.5;
+      width: 87%;
+      height: auto;
+      max-width: 430px;
+      border-radius: 38px 0;
+      transform: translate(40px, 40px);
+    }
+  }
+</style>

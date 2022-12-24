@@ -1,0 +1,80 @@
+---
+import { Image } from "@astrojs/image/components";
+import logo from "../images/logo.png";
+---
+
+<footer id="contact">
+  <div class="container">
+    <div class="container-footer">
+      <div class="container-footer__logo">
+        <a href="#"
+          ><Image class="logo-1" src={logo} width="223" alt="logo" />
+        </a>
+      </div>
+      <p class="container-footer__t1">
+        ARTIST MANAGEMENT: &nbsp;&nbsp; JAKE HENNY
+      </p>
+      <p class="container-footer__t2">
+        EMAIL: &nbsp;&nbsp; JAKE@BRIGHTLIGHTSOFFICIAL.COM
+      </p>
+      <div class="container-footer__icon">
+        <a href="#"><img src="/img/apple-ic.svg" width="60" alt="apple" /></a>
+        <a href="#"
+          ><img src="/img/spotify-ic.svg" width="60" alt="spotify" />
+        </a>
+        <a href="#"><img src="/img/insta-ic.svg" width="60" alt="ista" /></a>
+        <a href="#"><img src="/img/youtube-ic.svg" width="60" alt="apple" /></a>
+        <a href="#"
+          ><img src="/img/twiter-ic.svg" width="60" alt="spotify" />
+        </a>
+        <a href="#"><img src="/img/fb-ic.svg" width="60" alt="ista" /></a>
+      </div>
+      <p class="container-footer__t3">© 2022 DJ BRIGHT LIGHTS.</p>
+    </div>
+  </div>
+</footer>
+<style lang="scss">
+  .container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 490px;
+    margin: auto;
+    padding: 40px 20px;
+    &__logo {
+      padding-bottom: 30px;
+    }
+    &__t1 {
+      align-self: start;
+    }
+    &__t2 {
+      align-self: end;
+    }
+    &__t3 {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 300;
+      padding-top: 30px;
+    }
+    &__icon {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding-top: 30px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .container-footer {
+      &__t1 {
+        font-size: 13px;
+      }
+      &__t2 {
+        font-size: 13px;
+      }
+    }
+  }
+</style>

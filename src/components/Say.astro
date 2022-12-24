@@ -1,0 +1,90 @@
+---
+import { Image } from "@astrojs/image/components";
+import Say from "../images/say.jpg";
+---
+
+<section class="section section-say" id="news">
+  <div class="container">
+    <div class="say">
+      <div class="say__content">
+        <p class="p-fluid">
+          “In an age where mainstream music is designed to be as easily consumed
+          as possible, listening to Bright Lights is refreshing, to say the
+          least. Her sound is perfect for radio but complex enough to separate
+          her from other pop newcomers.”
+        </p>
+        <hr class="hr-line" />
+        <a href="#" class="link-say">PopULove.net</a>
+      </div>
+      <div class="say__img">
+        <Image class="say__img--item" src={Say} alt="img say" format="avif" />
+      </div>
+    </div>
+  </div>
+</section>
+<style lang="scss">
+  .section-say {
+    background: #1e1e1e;
+    padding: 60px 20px;
+  }
+  .say {
+    position: relative;
+    border: 1px solid var(--white);
+    padding: 30px 40px;
+    border-radius: 30px 0;
+    margin: 80px 0;
+    &__content {
+      max-width: 500px;
+      background-image: url("../images/kv.png");
+      background-repeat: no-repeat;
+    }
+    &__img {
+      position: absolute;
+      top: -50%;
+      right: 5%;
+      &--item {
+        border-radius: 30px 0;
+      }
+    }
+  }
+
+  .hr-line {
+    margin: 20px 0;
+    padding: 0;
+    height: 0;
+    border: none;
+    border-top: 1px solid var(--white);
+  }
+  .link-say {
+    color: var(--accept);
+    font-weight: bold;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 1096px) {
+    .say {
+      margin-top: 10px;
+      &__content {
+        margin: auto;
+      }
+      &__img {
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, 40%);
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .section-say {
+      padding-top: 0px;
+    }
+    .say {
+      padding: 15px;
+      &__img {
+        &--item {
+          max-width: 300px;
+          height: 100%;
+        }
+      }
+    }
+  }
+</style>

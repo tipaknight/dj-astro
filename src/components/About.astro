@@ -1,0 +1,86 @@
+---
+import BlockCart from "./BlockCart.astro";
+import IconSvg1 from "./ui/IconSvg1.astro";
+import PosterImg from "./PosterImg.astro";
+import abImgPost1 from "../images/about-poster-1.jpg";
+import abImgPost2 from "../images/about-poster-2.jpg";
+import AboutGrid from "./AboutGrid.astro";
+---
+
+<section class="section section-about" id="about">
+  <div class="container">
+    <div class="about-carts"><BlockCart /></div>
+    <div class="about-us">
+      <div class="about-us__text">
+        <div class="about-us__text--title">
+          <span><IconSvg1 /></span>
+          <h2 class="h2-fluid">Bright Lights</h2>
+        </div>
+        <p class="p-fluid">
+          Bright Lights is a multi-Grammy nominated singer, songwriter, DJ and
+          record producer. She has written for numerous pop stars including
+          Britney Spears, Justin Bieber, Usher and Beyoncé. Her catalog has
+          amassed over 1 billion streams worldwide. More than 100 million of
+          those streams can be attributed to her artist career and include such
+          hits as Porter Robinson's "Language," 3LAU's "How You Love Me" and her
+          own single "Runaway." She was also a featured vocalist on Zedd's #1
+          Clarity album. Her latest music video, "Put It Down," reached 1
+          million streams in the first week, releasing independently. Bright
+          Lights is currently in the studio working on a self-produced album
+          slated for release in 2020.
+        </p>
+        <AboutGrid />
+      </div>
+      <div class="about-us__img">
+        <PosterImg
+          ImgPoster1={abImgPost1}
+          altPosterImg1="img poster"
+          ImgPoster2={abImgPost2}
+          altPosterImg2="img poster"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+<style lang="scss">
+  .section-about {
+    background: #1e1e1e;
+    padding-bottom: 60px;
+  }
+  .about-carts {
+    margin-top: -100px;
+  }
+  .about-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 80px;
+    &__text {
+      max-width: 500px;
+      padding: 20px;
+
+      &--title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 40px;
+      }
+    }
+    &__img {
+      display: block;
+      max-width: 450px;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .about-carts {
+      margin-top: -35px;
+    }
+    .about-us {
+      padding: 0 10px;
+    }
+  }
+</style>

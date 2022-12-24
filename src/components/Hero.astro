@@ -1,0 +1,36 @@
+<section class="section section-hero">
+  <div class="container">
+    <div class="hero-wrapper">
+      <h2 class="h2-fluid">New Single</h2>
+      <h1 class="h1-fluid cont">War For Love</h1>
+      <audio class="hero-wrapper__audio-1" controls="controls">
+        <source src="./media/War for life.mp3" type="audio/mp3" />
+      </audio>
+    </div>
+  </div>
+</section>
+<style lang="scss">
+  .section-hero {
+    position: relative;
+    background-image: url(../images/bg-hero.jpg);
+    height: 100vmin;
+  }
+  .hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 40%;
+    margin: 0 20px;
+    &__audio-1 {
+      height: 30px;
+      width: 100%;
+    }
+  }
+  .cont {
+    color: var(--white);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(white);
+  }
+</style>

@@ -1,0 +1,75 @@
+---
+import { Image } from "@astrojs/image/components";
+import Music from "../images/music.jpg";
+import IconSvg1 from "./ui/IconSvg1.astro";
+import Player from "./Player.astro";
+import IconMusic from "./IconMusic.astro";
+---
+
+<div class="section section-music" id="music">
+  <div class="container">
+    <div class="music-wrapper">
+      <div class="music-wrapper__item">
+        <Image
+          class="music-wrapper__item--img"
+          aspectRatio="1:1"
+          src={Music}
+          alt="img music"
+          format="avif"
+        />
+      </div>
+      <div class="music-wrapper__item">
+        <div class="music-wrapper__item--title">
+          <IconSvg1 />
+          <h2 class="h2-fluid">Last tracks</h2>
+        </div>
+        <Player />
+        <IconMusic />
+      </div>
+    </div>
+  </div>
+</div>
+<style lang="scss">
+  .section-music {
+    margin-top: 130px;
+    padding-bottom: 60px;
+  }
+  .music-wrapper {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 30px 40px;
+    &__item {
+      width: 100%;
+      max-width: 450px;
+      &--img {
+        border: 30px groove var(--accept);
+        border-radius: 50%;
+      }
+      &--title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  @media screen and (max-width: 1096px) {
+    .music-wrapper {
+      margin-top: 480px;
+      padding: 20px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .music-wrapper {
+      margin-top: 350px;
+      &__item {
+        &--img {
+          width: 300px;
+          height: 300px;
+        }
+      }
+    }
+  }
+</style>

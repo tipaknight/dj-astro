@@ -1,0 +1,44 @@
+---
+import "../styles/_header.scss";
+import { Image } from "@astrojs/image/components";
+import logo from "../images/logo.png";
+
+const menuItems = [
+  { url: "#about", title: "About" },
+  { url: "#news", title: "News" },
+  { url: "#music", title: "Music" },
+  { url: "#media", title: "Media" },
+  { url: "#tours", title: "Tours" },
+  { url: "#contact", title: "Contacts" },
+];
+---
+
+<header>
+  <nav id="navbar">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="#"><Image src={logo} width="223" alt="logo" /></a>
+        </div>
+        <ul class="menu">
+          {
+            menuItems.map((menuItem) => (
+              <li class="menu__item">
+                <a href={menuItem.url} class="menu__item--link">
+                  {menuItem.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <div class="burger">
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<script hoist>
+  import "../scripts/navbar.js";
+</script>
+<style lang="scss"></style>

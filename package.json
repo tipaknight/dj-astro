@@ -1,0 +1,24 @@
+{
+  "name": "astro-build",
+  "type": "module",
+  "version": "1.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/image": "^0.11.1",
+    "@astrojs/vue": "^1.2.1",
+    "astro": "^1.6.0",
+    "autoprefixer": "^10.4.13",
+    "vue": "^3.2.45",
+    "vue3-carousel": "^0.2.8"
+  },
+  "devDependencies": {
+    "sass": "^1.56.0"
+  }
+}
