@@ -1,3 +1,6 @@
+<h2 align="center">The demo of the site is made on astroJS+vue+js from a free figma template.</h2>
+<h3 align="center"> Online version <a href="https://dj-astrojs-demo.netlify.app" target="_blank">DJ-ASTROJS-DEMO</a>
+
 # Welcome to [Astro](https://astro.build)
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
